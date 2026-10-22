@@ -1,0 +1,72 @@
+{
+  "parameter": {
+    "arbeitstage_pro_jahr": 240,
+    "arbeitstage_pro_woche": 5,
+    "abc_grenze_a": 0.80,
+    "abc_grenze_b": 0.95,
+    "xyz_grenze_x": 0.5,
+    "xyz_grenze_y": 1.0
+  },
+  "materialien": [
+    {
+      "nummer": "1007", "bezeichnung": "Steuereinheit", "wert": 136.20, "jahresbedarf": 4000,
+      "verbrauchsreihe": [330, 340, 335, 325, 330, 340, 335, 330, 335, 330, 335, 335]
+    },
+    {
+      "nummer": "1009", "bezeichnung": "Gehäuse (Übung Beschaffung)", "wert": 37.85, "jahresbedarf": 12000,
+      "bestellkosten": 100, "lagerhaltungskosten": 5, "lieferzeit_wochen": 2,
+      "sicherheitsbestand": 200, "lagerbestand": 650,
+      "verbrauchsreihe": [1000, 990, 1010, 1005, 995, 1000, 1000, 1010, 990, 1000, 1005, 995],
+      "verfahren_vorgabe": "Meldebestandsverfahren",
+      "begruendung": "konstanter Jahresbedarf, feste Lieferzeit und Sicherheitsbestand bekannt"
+    },
+    {
+      "nummer": "1004", "bezeichnung": "Antriebswelle", "wert": 17.50, "jahresbedarf": 6000,
+      "bestellkosten": 80, "lagerhaltungskosten": 1.75, "lieferzeit_wochen": 1,
+      "sicherheitsbestand": 100, "lagerbestand": 900,
+      "verbrauchsreihe": [200, 900, 300, 800, 250, 700, 300, 850, 200, 750, 300, 450]
+    },
+    {
+      "nummer": "1006", "bezeichnung": "Dichtungssatz", "wert": 6.25, "jahresbedarf": 8000,
+      "bestellkosten": 60, "lagerhaltungskosten": 0.60, "lieferzeit_wochen": 2,
+      "sicherheitsbestand": 150, "lagerbestand": 600,
+      "verbrauchsreihe": [660, 670, 650, 680, 660, 670, 660, 670, 650, 680, 670, 680]
+    },
+    {
+      "nummer": "1001", "bezeichnung": "Schraubensatz", "wert": 3.25, "jahresbedarf": 10000,
+      "bestellkosten": 50, "lagerhaltungskosten": 0.30, "lieferzeit_wochen": 1,
+      "sicherheitsbestand": 100, "lagerbestand": 1500, "offene_bestellungen": 0,
+      "verbrauchsreihe": [830, 840, 835, 825, 830, 840, 835, 830, 835, 830, 835, 835],
+      "verfahren_vorgabe": "Zykluszeitverfahren",
+      "begruendung": "gleicher Lieferant wie die C-Teile, Bestellungen werden gebündelt"
+    },
+    {
+      "nummer": "1005", "bezeichnung": "Unterlegscheibe", "wert": 1.60, "jahresbedarf": 12400,
+      "bestellkosten": 40, "lagerhaltungskosten": 0.20, "lieferzeit_wochen": 1,
+      "sicherheitsbestand": 0, "lagerbestand": 3000,
+      "verbrauchsreihe": [1030, 1040, 1035, 1025, 1030, 1040, 1035, 1030, 1035, 1030, 1035, 1035]
+    },
+    {
+      "nummer": "1008", "bezeichnung": "Ersatzlampe", "wert": 2.10, "jahresbedarf": 6800,
+      "verbrauchsreihe": [0, 0, 3400, 0, 0, 0, 0, 0, 3400, 0, 0, 0]
+    },
+    {
+      "nummer": "1002", "bezeichnung": "Kabelbinder", "wert": 1.10, "jahresbedarf": 12800,
+      "bestellkosten": 30, "lagerhaltungskosten": 0.15, "lieferzeit_wochen": 1,
+      "sicherheitsbestand": 200, "lagerbestand": 900
+    },
+    {
+      "nummer": "1003", "bezeichnung": "Klebeband", "wert": 1.75, "jahresbedarf": 8000,
+      "lieferzeit_wochen": 1, "lagerbestand": 400,
+      "verbrauchsreihe": [300, 1000, 400, 900, 350, 950, 300, 1000, 400, 900, 300, 1200]
+    }
+  ],
+  "stueckliste": {
+    "Material X": {"Bauteil A": 2, "Teil c": 5, "Bauteil B": 3},
+    "Bauteil A": {"Bauteil B": 1, "Teil c": 2},
+    "Bauteil B": {"Teil a": 5, "Teil b": 3}
+  },
+  "primaerbedarf": {
+    "Material X": 100
+  }
+}
